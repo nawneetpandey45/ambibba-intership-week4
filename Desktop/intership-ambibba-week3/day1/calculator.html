@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Professional Console Calculator</title>
+
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg:#0f172a;
+    --card:#020617cc;
+    --accent:#38bdf8;
+    --btn:#1e293b;
+    --text:#e5e7eb;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'JetBrains Mono', monospace;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#020617,#0f172a);
+    color:var(--text);
+}
+
+.calculator{
+    width:360px;
+    background:var(--card);
+    backdrop-filter:blur(15px);
+    border-radius:20px;
+    box-shadow:0 20px 40px rgba(0,0,0,.6);
+    overflow:hidden;
+}
+
+.header{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:15px;
+    background:#020617;
+}
+
+.header img{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+}
+
+.header h2{
+    font-size:16px;
+    color:var(--accent);
+}
+
+.display{
+    padding:20px;
+    background:black;
+    color:#22c55e;
+    font-size:22px;
+    text-align:right;
+    min-height:70px;
+    word-wrap:break-word;
+}
+
+.buttons{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+    padding:18px;
+}
+
+button{
+    padding:18px;
+    border:none;
+    border-radius:12px;
+    background:var(--btn);
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+button:hover{
+    background:var(--accent);
+    color:black;
+}
+
+.equal{
+    grid-column:span 2;
+    background:#22c55e;
+    color:black;
+    font-weight:bold;
+}
+
+.clear{
+    background:#ef4444;
+}
+
+.footer{
+    text-align:center;
+    font-size:12px;
+    padding-bottom:10px;
+    opacity:.6;
+}
+</style>
+</head>
+
+<body>
+
+<div class="calculator">
+    
+    <!-- Header -->
+    <div class="header">
+        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png">
+        <h2>Console Calculator</h2>
+    </div>
+
+    <div id="display" class="display">0</div>
+
+    <div class="buttons">
+        <button class="clear" onclick="clearDisplay()">C</button>
+        <button onclick="append('/')">÷</button>
+        <button onclick="append('*')">×</button>
+        <button onclick="backspace()">⌫</button>
+
+        <button onclick="append('7')">7</button>
+        <button onclick="append('8')">8</button>
+        <button onclick="append('9')">9</button>
+        <button onclick="append('-')">−</button>
+
+        <button onclick="append('4')">4</button>
+        <button onclick="append('5')">5</button>
+        <button onclick="append('6')">6</button>
+        <button onclick="append('+')">+</button>
+
+        <button onclick="append('1')">1</button>
+        <button onclick="append('2')">2</button>
+        <button onclick="append('3')">3</button>
+        <button onclick="append('.')">.</button>
+
+        <button onclick="append('0')">0</button>
+        <button class="equal" onclick="calculate()">=</button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
