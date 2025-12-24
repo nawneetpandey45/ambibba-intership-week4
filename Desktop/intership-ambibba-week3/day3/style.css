@@ -1,0 +1,166 @@
+:root{
+    --bg:#0b0f1a;
+    --card:#111827cc;
+    --accent:#2563eb;
+    --text:#e5e7eb;
+    --muted:#9ca3af;
+    --success:#22c55e;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#020617,#0f172a);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:var(--text);
+}
+
+.app{
+    width:420px;
+    background:var(--card);
+    backdrop-filter:blur(18px);
+    border-radius:24px;
+    box-shadow:0 30px 60px rgba(0,0,0,.6);
+    overflow:hidden;
+}
+
+/* Header */
+.header{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:20px;
+    background:#020617;
+}
+
+.header img{
+    width:46px;
+}
+
+.header h2{
+    font-size:20px;
+    color:var(--accent);
+}
+
+/* Welcome */
+.welcome{
+    padding:18px 20px 0;
+}
+
+.welcome h3{
+    font-size:18px;
+}
+
+.welcome p{
+    font-size:13px;
+    color:var(--muted);
+    margin-top:4px;
+}
+
+/* Stats */
+.stats{
+    display:flex;
+    gap:12px;
+    padding:16px 20px;
+}
+
+.stat{
+    flex:1;
+    background:#020617;
+    padding:12px;
+    border-radius:14px;
+    text-align:center;
+}
+
+.stat h4{
+    font-size:18px;
+}
+
+.stat p{
+    font-size:12px;
+    color:var(--muted);
+}
+
+/* Input */
+.input-area{
+    display:flex;
+    gap:10px;
+    padding:16px 20px;
+}
+
+.input-area input{
+    flex:1;
+    padding:12px;
+    border-radius:14px;
+    border:none;
+    outline:none;
+    background:#020617;
+    color:white;
+}
+
+.input-area button{
+    padding:12px 18px;
+    border:none;
+    border-radius:14px;
+    background:var(--accent);
+    color:white;
+    font-weight:600;
+    cursor:pointer;
+}
+
+/* Tasks */
+ul{
+    list-style:none;
+    padding:0 20px 20px;
+    max-height:260px;
+    overflow-y:auto;
+}
+
+li{
+    background:#020617;
+    padding:14px;
+    border-radius:16px;
+    margin-top:12px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    animation:slide .3s ease;
+}
+
+li.completed span{
+    text-decoration:line-through;
+    color:var(--muted);
+}
+
+li span{
+    cursor:pointer;
+}
+
+.actions button{
+    background:none;
+    border:none;
+    color:#ef4444;
+    font-size:16px;
+    cursor:pointer;
+}
+
+/* Footer */
+.footer{
+    text-align:center;
+    font-size:12px;
+    padding-bottom:12px;
+    opacity:.6;
+}
+
+@keyframes slide{
+    from{opacity:0;transform:translateY(10px);}
+    to{opacity:1;transform:translateY(0);}
+}
