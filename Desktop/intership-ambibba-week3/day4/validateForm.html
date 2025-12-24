@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Create an Account</title>
+
+<link href="style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+<div class="left">
+  <div class="logo"></div>
+  <h1>Introducing the all-new M1 ultra-chip</h1>
+  <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=900" alt="Product">
+</div>
+
+<div class="right">
+  <div class="top-lang">English (UK) ▾</div>
+
+  <h2>Create an Account</h2>
+
+  <div class="social">
+    <button class="btn">Email</button>
+    <button class="btn">Google</button>
+    <button class="btn">Facebook</button>
+  </div>
+
+  <div class="or">— OR —</div>
+
+  <div class="field">
+    <input id="name" placeholder="Full Name">
+    <div class="error" id="nameErr">Minimum 3 characters</div>
+  </div>
+
+  <div class="field">
+    <input id="email" placeholder="Email Address">
+    <div class="error" id="emailErr">Invalid email</div>
+  </div>
+
+  <div class="field password">
+    <input id="password" type="password" placeholder="Password">
+    <span onclick="toggle()">Show</span>
+    <div class="error" id="passErr">Min 8 chars, 1 capital, 1 number</div>
+  </div>
+
+  <button class="submit" onclick="validate()">Create Account</button>
+
+  <div class="footer">
+    Already have an account? <b>Log in</b>
+  </div>
+</div>
+
+<script src="script.js">
+
+</script>
+
+</body>
+</html>
